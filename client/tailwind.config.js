@@ -5,6 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'white': '#ffffff',
+      'purple': '#3f3cbb',
+      'midnight': '#121063',
+      'metal': '#d9d9d9',
+      'tahiti': '#3ab7bf',
+      'silver': '#ecebff',
+      'bubble-gum': '#ff77e9',
+      'bermuda': '#78dcca',
+      'gray': '#737373',
+      'aluminium': 'cdcdcd',
+    },
     extend: {},
   },
   plugins: [
