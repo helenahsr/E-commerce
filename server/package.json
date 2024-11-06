@@ -2,14 +2,18 @@
   "name": "server",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/server.ts"
+  },
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/bun": "^1.1.13",
     "prisma": "^5.22.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0"
+    "@prisma/client": "^5.22.0",
+    "elysia": "^1.1.24"
   }
 }
