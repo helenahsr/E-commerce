@@ -1,12 +1,12 @@
 import { Elysia, t } from 'elysia';
 import { PrismaClient } from '@prisma/client';
+import { swagger } from '@elysiajs/swagger'
 
 const prisma = new PrismaClient();
 
-const app = new Elysia()
-	.post(
-		'/login',
-		async ({ body }) => {
+new Elysia()
+    .use(swagger())
+	.post('/login',	async ({ body }) => {
 			const { email, password } = body;
 			const user = await prisma.user.findUnique({
 				where: { email: email },
