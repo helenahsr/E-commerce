@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 function Login() {
     return (
         <>
@@ -13,7 +14,7 @@ function Login() {
                     </label>
                     <button class='bg-metal mt-4 rounded-xl py-2'>Entrar</button>
                 </form>
-                <span>Não tem uma conta? <a class='text-purple' href="#">Cadastre-se.</a></span>
+                <span>Não tem uma conta? <Link class='text-purple' to='/register'>Cadastre-se.</Link></span>
             </main>
         </>
     )
