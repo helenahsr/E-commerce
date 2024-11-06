@@ -22,4 +22,23 @@ new Elysia()
 			}),
 		}
 	)
+    .post('/register', async ({ body }) => {
+        const { email, password } = body
+        const user = await prisma.user.findUnique({
+            where: { email: email },
+        });
+        if (user !== null) return 'ja existe'
+        await prisma.user.create({
+            data: {
+                email: email,
+                password: password,
+            }
+        })
+        return 'criado'
+    }, {
+        body: t.Object({
+            email: t.String(),
+            password: t.String(),
+        }),
+    })
 	.listen(3000);
